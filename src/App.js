@@ -28,17 +28,11 @@ function App() {
 
       // section below converts times into seconds
       const timeArray = [hours * 60 * 60, minutes * 60, seconds];
-
-      let videoSeconds = 0;
-
-      for (let i = 0; i < timeArray.length; i++) {
-         videoSeconds += Number(timeArray[i]);
-      }
+      const videoSeconds = timeArray.reduce((a, b) => a + b, 0);
 
       // video file size in megabits
       const videoSize = videoSeconds * bitrate;
       uploadTime = videoSize / uploadSpeed;
-
 
     } else {
       uploadTime = fileSize / uploadSpeed;
