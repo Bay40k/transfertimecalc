@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/uploadtimecalc/static/css/main.60509a34.css",
+    "main.js": "/uploadtimecalc/static/js/main.4d2a9a92.js",
+    "index.html": "/uploadtimecalc/index.html",
+    "main.60509a34.css.map": "/uploadtimecalc/static/css/main.60509a34.css.map",
+    "main.4d2a9a92.js.map": "/uploadtimecalc/static/js/main.4d2a9a92.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60509a34.css",
+    "static/js/main.4d2a9a92.js"
+  ]
+}
