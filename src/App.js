@@ -72,12 +72,12 @@ function App() {
             <input type="text" id="bitrateInputField" value={bitrateText} onChange={(evt) => setBitrateText(evt.target.value)} disabled={!videosEnabledBool} />
             <p style={{fontSize: "15px"}}>(Common bitrate ranges from 8-12Mbps for 1080p)</p>
           </div>
-          <br />
-          <button style={{fontSize: "20px"}} onClick={calculate}>Calculate</button>
-          <div>
-            <p>Output (minutes): </p>
-            <input type="text" id="outputField" value={outputFieldText} onChange={(evt) => setOutputFieldText(evt.target.value)} />
-          </div>
+        </div>
+        <br />
+        <button style={{fontSize: "20px"}} onClick={calculate}>Calculate</button>
+        <div>
+          <p>Output (minutes): </p>
+          <input type="text" id="outputField" value={outputFieldText} onChange={(evt) => setOutputFieldText(evt.target.value)} />
         </div>
       </div>
     </div>
