@@ -16,28 +16,27 @@ function App() {
     console.log("videos " + (videosEnabledBool ? "enabled" : "disabled"));
 
     // fileSize converted to megabits from megabytes, hence the *8
-    let fileSize = Number(fileSizeText) * 8;
-    let uploadSpeed = Number(uploadSpeedText);
+    const fileSize = Number(fileSizeText) * 8;
+    const uploadSpeed = Number(uploadSpeedText);
+    let uploadTime;
 
     if (videosEnabledBool === true) {
-      let hours = Number(hoursText);
-      let minutes = Number(minutesText);
-      let seconds = Number(secondsText);
-      let bitrate = Number(bitrateText);
+      const hours = Number(hoursText);
+      const minutes = Number(minutesText);
+      const seconds = Number(secondsText);
+      const bitrate = Number(bitrateText);
 
       // section below converts times into seconds
-      let timeArray = [hours * 60 * 60, minutes * 60, seconds];
+      const timeArray = [hours * 60 * 60, minutes * 60, seconds];
 
       let videoSeconds = 0;
 
-      let i;
-      var uploadTime;
-      for (i = 0; i < timeArray.length; i++) {
+      for (let i = 0; i < timeArray.length; i++) {
          videoSeconds += Number(timeArray[i]);
       }
 
       // video file size in megabits
-      let videoSize = videoSeconds * bitrate;
+      const videoSize = videoSeconds * bitrate;
       uploadTime = videoSize / uploadSpeed;
 
 
@@ -46,7 +45,7 @@ function App() {
       console.log("seconds: " + uploadTime);
     }
 
-    let uploadTimeMinutes = (uploadTime / 60).toFixed(2);
+    const uploadTimeMinutes = (uploadTime / 60).toFixed(2);
     console.log("minutes: " + uploadTimeMinutes)
     setOutputFieldText(uploadTimeMinutes);
 
