@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/transfertimecalc/static/css/main.201ffab8.css",
+    "main.css": "/transfertimecalc/static/css/main.2451a4cd.css",
     "main.js": "/transfertimecalc/static/js/main.de9463f6.js",
     "index.html": "/transfertimecalc/index.html",
-    "main.201ffab8.css.map": "/transfertimecalc/static/css/main.201ffab8.css.map",
+    "main.2451a4cd.css.map": "/transfertimecalc/static/css/main.2451a4cd.css.map",
     "main.de9463f6.js.map": "/transfertimecalc/static/js/main.de9463f6.js.map"
   },
   "entrypoints": [
-    "static/css/main.201ffab8.css",
+    "static/css/main.2451a4cd.css",
     "static/js/main.de9463f6.js"
   ]
 }
