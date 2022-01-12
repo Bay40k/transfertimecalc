@@ -1,7 +1,7 @@
 import './App.css';
 import { React, useState } from "react";
 import { FitToViewport } from 'react-fit-to-viewport';
-import { Button, TextField, Checkbox, createTheme, ThemeProvider } from '@mui/material';
+import { Button, TextField, Checkbox, createTheme, ThemeProvider, InputAdornment, OutlinedInput, FormHelperText } from '@mui/material';
 import { orange } from '@mui/material/colors';
 
 function App() {
@@ -56,7 +56,7 @@ function App() {
   });
 
   return (
-    <FitToViewport style={{width: "auto", minWidth: "1px"}} width={600} height={1} minZoom={0.8} maxZoom={1}>
+    <FitToViewport style={{width: "auto"}} width={1} height={1} minZoom={0.8} maxZoom={1}>
       <ThemeProvider theme={darkTheme}>
 		  <h1>File Transfer Time Calculator</h1>
       <div className="mainDiv">
@@ -67,12 +67,24 @@ function App() {
         */}
         <div>
           <div className="textInputField">
-            <div>Transfer speed (Mbps): </div>
-            <div><TextField value={uploadSpeedText} onChange={(evt) => setUploadSpeedText(evt.target.value)} /></div>
+            <div>
+              <FormHelperText id="outlined-speed-helper-text">Transfer speed</FormHelperText>
+              <OutlinedInput className="fullWidth" value={uploadSpeedText} onChange={(evt) => setUploadSpeedText(evt.target.value)}
+              endAdornment={<InputAdornment position="end">Mbps</InputAdornment>}
+              aria-describedby="outlined-speed-helper-text"
+              inputProps={{
+                'aria-label': 'Transfer speed',
+            }}/></div>
           </div>
           <div className={`textInputField ${!videosEnabledBool ? '' : 'grayedOut'}`}>
-            <div>File size (MB): </div>
-            <div><TextField value={fileSizeText} onChange={(evt) => setFileSizeText(evt.target.value)} disabled={videosEnabledBool} /></div>
+            <div>
+              <FormHelperText id="outlined-size-helper-text">File size</FormHelperText>
+              <OutlinedInput className="fullWidth" value={fileSizeText} onChange={(evt) => setFileSizeText(evt.target.value)} disabled={videosEnabledBool}
+              endAdornment={<InputAdornment position="end">MB</InputAdornment>}
+              aria-describedby="outlined-size-helper-text"
+              inputProps={{
+                'aria-label': 'File size',
+            }}/></div>
           </div>
           <div>
             <h2><Checkbox onChange={(evt) => setVideosEnabledBool(evt.target.checked)} /> Videos: </h2>
@@ -94,8 +106,9 @@ function App() {
           </div>
 
           <div className="textInputField">
-            <div>Video bitrate (Mbps): </div>
-            <TextField value={bitrateText} onChange={(evt) => setBitrateText(evt.target.value)} disabled={!videosEnabledBool} />
+            <div>Video bitrate: </div>
+            <OutlinedInput value={bitrateText} onChange={(evt) => setBitrateText(evt.target.value)} disabled={!videosEnabledBool}
+            endAdornment={<InputAdornment position="end">Mbps</InputAdornment>}/>
           </div>
 
           <div>
@@ -112,8 +125,9 @@ function App() {
             <Button className="calculateButton" variant="contained" onClick={calculate}>Calculate</Button>
           </div>
           <div className="textInputField">
-            <p>Output (minutes): </p>
-            <TextField value={outputFieldText} onChange={(evt) => setOutputFieldText(evt.target.value)} />
+            <div>Output: </div>
+            <OutlinedInput value={outputFieldText} onChange={(evt) => setOutputFieldText(evt.target.value)}
+            endAdornment={<InputAdornment position="end">Min.</InputAdornment>} />
           </div>
         </div>
       </div>

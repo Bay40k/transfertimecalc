@@ -7,6 +7,7 @@ html {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding: 0 30px;
 }
 
 body {
@@ -41,6 +42,15 @@ h2 {
 
 .mainDiv > div {
 	width: 100%;
+	max-width: 400px;
+}
+
+.textInputField > div {
+	width: 100%;
+}
+
+.fullWidth {
+	width: 100%;
 }
 
 textarea, select, input, button {
@@ -51,9 +61,6 @@ textarea, select, input, button {
 	opacity: 0.5;
 }
 
-.timeInput {
-	width: 75px;
-}
 
 .timeInputContainer {
 	display: flex;
