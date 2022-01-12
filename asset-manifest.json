@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/uploadtimecalc/static/css/main.1b1c4339.css",
-    "main.js": "/uploadtimecalc/static/js/main.ad4df4f3.js",
+    "main.css": "/uploadtimecalc/static/css/main.d607ecd4.css",
+    "main.js": "/uploadtimecalc/static/js/main.6b512028.js",
     "index.html": "/uploadtimecalc/index.html",
-    "main.1b1c4339.css.map": "/uploadtimecalc/static/css/main.1b1c4339.css.map",
-    "main.ad4df4f3.js.map": "/uploadtimecalc/static/js/main.ad4df4f3.js.map"
+    "main.d607ecd4.css.map": "/uploadtimecalc/static/css/main.d607ecd4.css.map",
+    "main.6b512028.js.map": "/uploadtimecalc/static/js/main.6b512028.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b1c4339.css",
-    "static/js/main.ad4df4f3.js"
+    "static/css/main.d607ecd4.css",
+    "static/js/main.6b512028.js"
   ]
 }
