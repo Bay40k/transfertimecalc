@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/uploadtimecalc/static/css/main.d607ecd4.css",
-    "main.js": "/uploadtimecalc/static/js/main.6b512028.js",
-    "index.html": "/uploadtimecalc/index.html",
-    "main.d607ecd4.css.map": "/uploadtimecalc/static/css/main.d607ecd4.css.map",
-    "main.6b512028.js.map": "/uploadtimecalc/static/js/main.6b512028.js.map"
+    "main.css": "/transfertimecalc/static/css/main.d607ecd4.css",
+    "main.js": "/transfertimecalc/static/js/main.6b512028.js",
+    "index.html": "/transfertimecalc/index.html",
+    "main.d607ecd4.css.map": "/transfertimecalc/static/css/main.d607ecd4.css.map",
+    "main.6b512028.js.map": "/transfertimecalc/static/js/main.6b512028.js.map"
   },
   "entrypoints": [
     "static/css/main.d607ecd4.css",
