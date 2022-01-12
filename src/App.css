@@ -10,7 +10,11 @@ html {
 }
 
 body {
-	overflow: hidden;
+	height: 100%;
+}
+
+#root {
+	width: 100%;
 }
 
 input[type=text] {
@@ -37,6 +41,7 @@ textarea, select, input, button {
 }
 
 .innerDiv {
+	white-space: nowrap;
 	margin-left: 7%;
 }
 
