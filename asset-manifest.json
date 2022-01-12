@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/transfertimecalc/static/css/main.d607ecd4.css",
-    "main.js": "/transfertimecalc/static/js/main.6b512028.js",
+    "main.css": "/transfertimecalc/static/css/main.201ffab8.css",
+    "main.js": "/transfertimecalc/static/js/main.de9463f6.js",
     "index.html": "/transfertimecalc/index.html",
-    "main.d607ecd4.css.map": "/transfertimecalc/static/css/main.d607ecd4.css.map",
-    "main.6b512028.js.map": "/transfertimecalc/static/js/main.6b512028.js.map"
+    "main.201ffab8.css.map": "/transfertimecalc/static/css/main.201ffab8.css.map",
+    "main.de9463f6.js.map": "/transfertimecalc/static/js/main.de9463f6.js.map"
   },
   "entrypoints": [
-    "static/css/main.d607ecd4.css",
-    "static/js/main.6b512028.js"
+    "static/css/main.201ffab8.css",
+    "static/js/main.de9463f6.js"
   ]
 }
