@@ -2,11 +2,11 @@ html {
 	font-size: 20px;
 	text-shadow: 5 white;
 	font-family: Arial;
+	background-color: black;
+	color: white;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: black;
-	color: white;
 }
 
 body {
@@ -32,41 +32,46 @@ h2 {
 	margin: 0;
 }
 
-.videosCheckboxContainer {
-	padding: 0;
+.textInputField {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+	align-items: center;
+}
+
+.mainDiv > div {
+	width: 100%;
 }
 
 textarea, select, input, button {
 	color: white;
 }
 
+.grayedOut {
+	opacity: 0.5;
+}
+
 .timeInput {
-	width: 70px;
+	width: 75px;
+}
+
+.timeInputContainer {
+	display: flex;
+	align-items: center;
 }
 
 .smallText {
 	font-size: 15px;
 }
 
-.calculateButton {
-	font-size: 20px;
-}
-
 .mainDiv {
-	display: grid;
-	grid-template-columns: auto auto;
-	align-items: center;
 	margin: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-.mainDiv > * {
-	margin-bottom: 10px;
-}
-
-.buttonContainer {
-	grid-column: 1/3;
-}
-
-.buttonContainer > button {
+.calculateButton {
 	width: 100%;
+	margin-bottom: 10px;
 }
