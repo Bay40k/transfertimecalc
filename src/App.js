@@ -48,36 +48,36 @@ function App() {
   return (
     <div>
 		  <h1>Upload File Time Calculator</h1>
-      <div id="mainDiv">
-        <div id="speedsDiv">
+      <div className="mainDiv">
+        <div>
           <div>
             <span>Upload speed (Mbps): </span>
-            <input type="text" id="uploadSpeedInputField" value={uploadSpeedText} onChange={(evt) => setUploadSpeedText(evt.target.value)} />
+            <input type="text" value={uploadSpeedText} onChange={(evt) => setUploadSpeedText(evt.target.value)} />
           </div>
           <div>
             <span>File size (MB): </span>
-            <input type="text" id="fileSizeInputField" value={fileSizeText} onChange={(evt) => setFileSizeText(evt.target.value)} disabled={videosEnabledBool} />
+            <input type="text" value={fileSizeText} onChange={(evt) => setFileSizeText(evt.target.value)} disabled={videosEnabledBool} />
           </div>
         </div>
-        <div id="videosDiv">
-          <h2><input className="checkbox" type="checkbox" id="videosCheckbox" onChange={(evt) => setVideosEnabledBool(evt.target.checked)} /> Videos: </h2>
+        <div>
+          <h2><input type="checkbox" onChange={(evt) => setVideosEnabledBool(evt.target.checked)} /> Videos: </h2>
           <div>
             <span>Video length: </span>
-            <input id="hours" className="timeInput" type="text" value={hoursText} onChange={(evt) => setHoursText(evt.target.value)} maxLength="2" placeholder="HH" disabled={!videosEnabledBool} />
-            : <input id="minutes" className="timeInput" type="text" value={minutesText} onChange={(evt) => setMinutesText(evt.target.value)} maxLength="2" placeholder="MM" disabled={!videosEnabledBool} />
-            : <input id="seconds" className="timeInput" type="text" value={secondsText} onChange={(evt) => setSecondsText(evt.target.value)} maxLength="2" placeholder="SS" disabled={!videosEnabledBool} />
+            <input type="text" className="timeInput" value={hoursText} onChange={(evt) => setHoursText(evt.target.value)} maxLength="2" placeholder="HH" disabled={!videosEnabledBool} />
+            : <input type="text" className="timeInput" value={minutesText} onChange={(evt) => setMinutesText(evt.target.value)} maxLength="2" placeholder="MM" disabled={!videosEnabledBool} />
+            : <input type="text" className="timeInput" value={secondsText} onChange={(evt) => setSecondsText(evt.target.value)} maxLength="2" placeholder="SS" disabled={!videosEnabledBool} />
           </div>
           <div>
             <span>Video bitrate (Mbps): </span>
-            <input type="text" id="bitrateInputField" value={bitrateText} onChange={(evt) => setBitrateText(evt.target.value)} disabled={!videosEnabledBool} />
-            <p style={{fontSize: "15px"}}>(Common bitrate ranges from 8-12Mbps for 1080p)</p>
+            <input type="text" value={bitrateText} onChange={(evt) => setBitrateText(evt.target.value)} disabled={!videosEnabledBool} />
+            <p className="smallText">(Common bitrate ranges from 8-12Mbps for 1080p)</p>
           </div>
         </div>
         <br />
-        <button style={{fontSize: "20px"}} onClick={calculate}>Calculate</button>
+        <button className="calculateButton" onClick={calculate}>Calculate</button>
         <div>
           <p>Output (minutes): </p>
-          <input type="text" id="outputField" value={outputFieldText} onChange={(evt) => setOutputFieldText(evt.target.value)} />
+          <input type="text" className="outputArea" value={outputFieldText} onChange={(evt) => setOutputFieldText(evt.target.value)} />
         </div>
       </div>
     </div>

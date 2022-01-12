@@ -17,7 +17,7 @@ h1 {
 	width: auto;
 }
 
-#mainDiv {
+.mainDiv {
 	margin-left: 40%;
 	margin-right: 40%;
 }
@@ -36,5 +36,18 @@ textarea, select, input, button {
 }
 
 .timeInput {
-	width:40px;
+	width: 40px;
+}
+
+.smallText {
+	font-size: 15px;
+}
+
+.calculateButton {
+	font-size: 20px;
+}
+
+.outputArea {
+	width: 60%;
+	font-size: 50px;
 }
