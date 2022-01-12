@@ -1,6 +1,7 @@
 import './App.css';
-import { useState } from "react";
+import { React, useState } from "react";
 import { FitToViewport } from 'react-fit-to-viewport';
+import { Button, TextField, Checkbox, createTheme, ThemeProvider } from '@mui/material';
 
 function App() {
   const [hoursText, setHoursText] = useState("");
@@ -46,43 +47,46 @@ function App() {
 
   }
 
+  const darkTheme = createTheme({
+    palette: {
+      mode: 'dark',
+    },
+  });
+
   return (
-    <FitToViewport width={400} height={1} minZoom={0} maxZoom={0.9}>
+    <FitToViewport width={600} height={1} minZoom={0} maxZoom={1}>
+      <ThemeProvider theme={darkTheme}>
 		  <h1>Upload File Time Calculator</h1>
       <div className="mainDiv">
-        <div className="innerDiv">
+        <span>Upload speed (Mbps): </span>
+        <span><TextField value={uploadSpeedText} onChange={(evt) => setUploadSpeedText(evt.target.value)} /></span>
+
+        <span>File size (MB): </span>
+        <span><TextField value={fileSizeText} onChange={(evt) => setFileSizeText(evt.target.value)} disabled={videosEnabledBool} /></span>
+
+        <div className="videosCheckboxContainer">
+          <h2><Checkbox onChange={(evt) => setVideosEnabledBool(evt.target.checked)} /> Videos: </h2>
+        </div>
+        <div></div>
+
+        <span>Video length: </span>
         <div>
-          <div>
-            <span>Upload speed (Mbps): </span>
-            <input type="text" value={uploadSpeedText} onChange={(evt) => setUploadSpeedText(evt.target.value)} />
-          </div>
-          <div>
-            <span>File size (MB): </span>
-            <input type="text" value={fileSizeText} onChange={(evt) => setFileSizeText(evt.target.value)} disabled={videosEnabledBool} />
-          </div>
+          <TextField className="timeInput" value={hoursText} onChange={(evt) => setHoursText(evt.target.value)} maxLength="2" label="HH" disabled={!videosEnabledBool} />
+          : <TextField className="timeInput" value={minutesText} onChange={(evt) => setMinutesText(evt.target.value)} maxLength="2" label="MM" disabled={!videosEnabledBool} />
+          : <TextField className="timeInput" value={secondsText} onChange={(evt) => setSecondsText(evt.target.value)} maxLength="2" label="SS" disabled={!videosEnabledBool} />
         </div>
-        <div>
-          <h2><input type="checkbox" onChange={(evt) => setVideosEnabledBool(evt.target.checked)} /> Videos: </h2>
-          <div>
-            <span>Video length: </span>
-            <input type="text" className="timeInput" value={hoursText} onChange={(evt) => setHoursText(evt.target.value)} maxLength="2" placeholder="HH" disabled={!videosEnabledBool} />
-            : <input type="text" className="timeInput" value={minutesText} onChange={(evt) => setMinutesText(evt.target.value)} maxLength="2" placeholder="MM" disabled={!videosEnabledBool} />
-            : <input type="text" className="timeInput" value={secondsText} onChange={(evt) => setSecondsText(evt.target.value)} maxLength="2" placeholder="SS" disabled={!videosEnabledBool} />
-          </div>
-          <div>
-            <span>Video bitrate (Mbps): </span>
-            <input type="text" value={bitrateText} onChange={(evt) => setBitrateText(evt.target.value)} disabled={!videosEnabledBool} />
-            <p className="smallText">(Common bitrate ranges from 8-12Mbps for 1080p)</p>
-          </div>
-        </div>
-        <br />
-        <button className="calculateButton" onClick={calculate}>Calculate</button>
-        <div>
-          <p>Output (minutes): </p>
-          <input type="text" className="outputArea" value={outputFieldText} onChange={(evt) => setOutputFieldText(evt.target.value)} />
-        </div>
-        </div>
+
+        <span>Video bitrate (Mbps): </span>
+        <TextField value={bitrateText} onChange={(evt) => setBitrateText(evt.target.value)} disabled={!videosEnabledBool} />
+        <p className="smallText">(Common bitrate ranges from 8-12Mbps for 1080p)</p>
+
+        <div></div>
+        <span className="buttonContainer"><Button className="calculateButton" variant="contained" onClick={calculate}>Calculate</Button></span>
+
+        <p>Output (minutes): </p>
+        <TextField className="outputArea" value={outputFieldText} onChange={(evt) => setOutputFieldText(evt.target.value)} />
       </div>
+      </ThemeProvider>
     </FitToViewport>
   );
 }
