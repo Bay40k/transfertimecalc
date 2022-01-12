@@ -56,7 +56,7 @@ function App() {
   });
 
   return (
-    <FitToViewport width={600} height={1} minZoom={0} maxZoom={1}>
+    <FitToViewport style={{width: "auto", minWidth: "1px"}} width={600} height={1} minZoom={0.8} maxZoom={1}>
       <ThemeProvider theme={darkTheme}>
 		  <h1>Upload File Time Calculator</h1>
       <div className="mainDiv">
