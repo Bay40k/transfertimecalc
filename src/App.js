@@ -58,7 +58,7 @@ function App() {
   return (
     <FitToViewport style={{width: "auto", minWidth: "1px"}} width={600} height={1} minZoom={0.8} maxZoom={1}>
       <ThemeProvider theme={darkTheme}>
-		  <h1>Upload File Time Calculator</h1>
+		  <h1>File Transfer Time Calculator</h1>
       <div className="mainDiv">
         {/*
         Upload speed: <input>
@@ -67,7 +67,7 @@ function App() {
         */}
         <div>
           <div className="textInputField">
-            <div>Upload speed (Mbps): </div>
+            <div>Transfer speed (Mbps): </div>
             <div><TextField value={uploadSpeedText} onChange={(evt) => setUploadSpeedText(evt.target.value)} /></div>
           </div>
           <div className={`textInputField ${!videosEnabledBool ? '' : 'grayedOut'}`}>
