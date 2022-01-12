@@ -1,5 +1,6 @@
 import './App.css';
 import { useState } from "react";
+import { FitToViewport } from 'react-fit-to-viewport';
 
 function App() {
   const [hoursText, setHoursText] = useState("");
@@ -46,9 +47,10 @@ function App() {
   }
 
   return (
-    <div>
+    <FitToViewport width={400} height={1} minZoom={0} maxZoom={1}>
 		  <h1>Upload File Time Calculator</h1>
       <div className="mainDiv">
+        <div className="innerDiv">
         <div>
           <div>
             <span>Upload speed (Mbps): </span>
@@ -79,8 +81,9 @@ function App() {
           <p>Output (minutes): </p>
           <input type="text" className="outputArea" value={outputFieldText} onChange={(evt) => setOutputFieldText(evt.target.value)} />
         </div>
+        </div>
       </div>
-    </div>
+    </FitToViewport>
   );
 }
 

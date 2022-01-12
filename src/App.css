@@ -2,10 +2,15 @@ html {
 	font-size: 20px;
 	text-shadow: 5 white;
 	font-family: Arial;
-	overflow: hidden;
-	white-space: nowrap;
 	background-color: black;
 	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+body {
+	overflow: hidden;
 }
 
 input[type=text] {
@@ -13,13 +18,9 @@ input[type=text] {
 }
 
 h1 {
+	margin-top: 0;
 	text-align: center;
 	width: auto;
-}
-
-.mainDiv {
-	margin-left: 40%;
-	margin-right: 40%;
 }
 
 input[type=checkbox] {
@@ -35,8 +36,12 @@ textarea, select, input, button {
 	color: white;
 }
 
+.innerDiv {
+	margin-left: 7%;
+}
+
 .timeInput {
-	width: 40px;
+	width: 30px;
 }
 
 .smallText {
@@ -48,6 +53,6 @@ textarea, select, input, button {
 }
 
 .outputArea {
-	width: 60%;
+	width: 200px;
 	font-size: 50px;
 }
