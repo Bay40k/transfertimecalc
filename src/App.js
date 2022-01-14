@@ -68,21 +68,23 @@ function App() {
             <div>
               <FormHelperText id="outlined-speed-helper-text">Transfer speed</FormHelperText>
               <OutlinedInput className="fullWidth" value={uploadSpeedText} onChange={(evt) => setUploadSpeedText(evt.target.value)}
-              endAdornment={<InputAdornment position="end">Mbps</InputAdornment>}
-              aria-describedby="outlined-speed-helper-text"
-              inputProps={{
-                'aria-label': 'Transfer speed',
-            }}/></div>
+                endAdornment={<InputAdornment position="end">Mbps</InputAdornment>}
+                aria-describedby="outlined-speed-helper-text"
+                inputProps={{
+                  'aria-label': 'Transfer speed',
+                }}
+            /></div>
           </div>
           <div className={`textInputField ${!videosEnabledBool ? '' : 'grayedOut'}`}>
             <div>
               <FormHelperText id="outlined-size-helper-text">File size</FormHelperText>
               <OutlinedInput className="fullWidth" value={fileSizeText} onChange={(evt) => setFileSizeText(evt.target.value)} disabled={videosEnabledBool}
-              endAdornment={<InputAdornment position="end">MB</InputAdornment>}
-              aria-describedby="outlined-size-helper-text"
-              inputProps={{
-                'aria-label': 'File size',
-            }}/></div>
+                endAdornment={<InputAdornment position="end">MB</InputAdornment>}
+                aria-describedby="outlined-size-helper-text"
+                inputProps={{
+                  'aria-label': 'File size',
+                }}
+            /></div>
           </div>
           <div>
             <h2><Checkbox onChange={(evt) => setVideosEnabledBool(evt.target.checked)} /> Videos: </h2>
@@ -106,7 +108,7 @@ function App() {
           <div className="textInputField">
             <div>Video bitrate: </div>
             <OutlinedInput value={bitrateText} onChange={(evt) => setBitrateText(evt.target.value)} disabled={!videosEnabledBool}
-            endAdornment={<InputAdornment position="end">Mbps</InputAdornment>}/>
+              endAdornment={<InputAdornment position="end">Mbps</InputAdornment>}/>
           </div>
 
           <div>
@@ -122,7 +124,7 @@ function App() {
           <div className="textInputField">
             <div>Output: </div>
             <OutlinedInput value={calculate()}
-            endAdornment={<InputAdornment position="end">Min.</InputAdornment>} />
+              endAdornment={<InputAdornment position="end">Min.</InputAdornment>} />
           </div>
         </div>
       </div>
