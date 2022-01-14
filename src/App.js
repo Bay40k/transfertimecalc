@@ -10,7 +10,6 @@ function App() {
   const [secondsText, setSecondsText] = useState("");
   const [fileSizeText, setFileSizeText] = useState("3000");
   const [bitrateText, setBitrateText] = useState("8");
-  const [outputFieldText, setOutputFieldText] = useState("");
   const [uploadSpeedText, setUploadSpeedText] = useState("30");
   const [videosEnabledBool, setVideosEnabledBool] = useState(false);
 
@@ -44,8 +43,7 @@ function App() {
 
     const uploadTimeMinutes = (uploadTime / 60).toFixed(2);
     console.log("minutes: " + uploadTimeMinutes)
-    setOutputFieldText(uploadTimeMinutes);
-
+    return uploadTimeMinutes;
   }
 
   const darkTheme = createTheme({
@@ -121,12 +119,9 @@ function App() {
           Output: <text>
         */}
         <div>
-          <div className="calculateButton">
-            <Button className="calculateButton" variant="contained" onClick={calculate}>Calculate</Button>
-          </div>
           <div className="textInputField">
             <div>Output: </div>
-            <OutlinedInput value={outputFieldText} onChange={(evt) => setOutputFieldText(evt.target.value)}
+            <OutlinedInput value={calculate()}
             endAdornment={<InputAdornment position="end">Min.</InputAdornment>} />
           </div>
         </div>
